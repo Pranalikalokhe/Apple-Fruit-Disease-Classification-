@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="AppleGuard AI - Premium AI-powered apple disease detection system using deep learning">
+    <meta name="keywords" content="apple disease detection, AI, machine learning, agriculture, plant pathology">
+    <meta name="author" content="Pranali Kalokhe">
+    <title>Apple Fruit Disease Classification - AI-Powered Disease Detection</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'images/logo-premium.png' %}">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Premium CSS -->
+    <link rel="stylesheet" href="{% static 'css/premium-styles.css' %}">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Premium Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-premium" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand-premium" href="#home">
+                <img src="{% static 'images/logo-premium.png' %}" alt="Apple Disease Classification Logo"
+                    class="logo-premium">
+                <span>Apple Fruit Disease Classification</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link-premium" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link-premium" href="#upload">Detect Disease</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Premium Hero Section -->
+    <section id="home" class="hero-premium">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content-premium">
+                    <h1 class="hero-title-premium" data-aos="fade-up">
+                        Advanced AI-Powered <span class="gradient-text">Apple Disease Detection</span>
+                    </h1>
+                    <p class="hero-subtitle-premium" data-aos="fade-up" data-aos-delay="200">
+                        🌿 Safeguard Your Apple Harvest with Intelligent Disease Detection
+                    </p>
+                    <p class="hero-description-premium" data-aos="fade-up" data-aos-delay="400">
+                        Leverage cutting-edge convolutional neural networks and computer vision to identify apple
+                        diseases with 98%
+                        accuracy. Get instant diagnosis, detailed information, and expert treatment recommendations for
+                        healthier orchards.
+                    </p>
+                    <div data-aos="fade-up" data-aos-delay="600">
+                        <a href="#upload" class="btn-premium btn-premium-primary">
+                            <i class="bi bi-play-circle-fill"></i>
+                            Start Detection
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-image-premium" data-aos="fade-left" data-aos-delay="400">
+                    <!-- Replace this with real HD apple leaf image from Google -->
+                    <img src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=800&q=80"
+                        alt="HD Apple Leaf"
+                        onerror="this.src='{% static 'images/ai_analysis_illustration_1764492032511.png' %}'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Statistics Section -->
+    <section class="stats-premium">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3 col-6" data-aos="fade-up">
+                    <div class="stat-card-premium">
+                        <div class="stat-number-premium" data-count="98">0</div>
+                        <div class="stat-label-premium">% Accuracy</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-card-premium">
+                        <div class="stat-number-premium" data-count="5">0</div>
+                        <div class="stat-label-premium">Disease Classes</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-card-premium">
+                        <div class="stat-number-premium" data-count="10000">0</div>
+                        <div class="stat-label-premium">Training Images</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-card-premium">
+                        <div class="stat-number-premium">&lt;2</div>
+                        <div class="stat-label-premium">Sec Detection</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Features Section -->
+    <section id="features" class="features-premium">
+        <div class="container">
+            <h2 class="section-title-premium" data-aos="fade-up">Powerful AI Features</h2>
+            <p class="section-subtitle-premium" data-aos="fade-up" data-aos-delay="100">
+                Advanced technology meets agricultural expertise for superior disease detection
+            </p>
+            <div class="row g-4 mt-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card-premium">
+                        <div class="feature-icon-premium">
+                            <i class="bi bi-cpu"></i>
+                        </div>
+                        <h3 class="feature-title-premium">Deep Learning CNN</h3>
+                        <p class="feature-description-premium">
+                            State-of-the-art Convolutional Neural Networks trained on thousands of apple leaf images for
+                            exceptional accuracy.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card-premium">
+                        <div class="feature-icon-premium">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                        </div>
+                        <h3 class="feature-title-premium">Real-Time Detection</h3>
+                        <p class="feature-description-premium">
+                            Get instant disease predictions in under 2 seconds with our optimized AI inference pipeline.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card-premium">
+                        <div class="feature-icon-premium">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <h3 class="feature-title-premium">98% Accuracy</h3>
+                        <p class="feature-description-premium">
+                            Industry-leading accuracy powered by advanced machine learning algorithms and extensive
+                            training data.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-card-premium">
+                        <div class="feature-icon-premium">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h3 class="feature-title-premium">5 Disease Classes</h3>
+                        <p class="feature-description-premium">
+                            Detects Bitter Rot, Black Rot, Cedar Rust, Apple Scab, and identifies healthy apples with
+                            precision.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-card-premium">
+                        <div class="feature-icon-premium">
+                            <i class="bi bi-phone"></i>
+                        </div>
+                        <h3 class="feature-title-premium">Responsive Design</h3>
+                        <p class="feature-description-premium">
+                            Access from any device - desktop, tablet, or mobile with our fully responsive premium
+                            interface.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+                    <div class="feature-card-premium">
+                        <div class="feature-icon-premium">
+                            <i class="bi bi-book"></i>
+                        </div>
+                        <h3 class="feature-title-premium">Expert Information</h3>
+                        <p class="feature-description-premium">
+                            Comprehensive disease information including symptoms, treatments, and prevention strategies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Premium Upload Section -->
+    <section id="upload" class="upload-premium">
+        <div class="container">
+            <div class="upload-card-premium" data-aos="fade-up">
+                <h2 class="upload-title-premium">
+                    <i class="bi bi-shield-check me-3"></i>Detect Apple Disease
+                </h2>
+                <form method="POST" enctype="multipart/form-data" action="/predict/" id="uploadForm">
+                    {% csrf_token %}
+                    <div class="file-upload-wrapper">
+                        <div class="file-upload-area-premium" id="fileUploadArea">
+                            <i class="bi bi-cloud-arrow-up upload-icon-premium"></i>
+                            <p class="upload-text-premium">Drag & Drop your apple leaf image here</p>
+                            <p class="upload-hint-premium">or click to browse (JPG, PNG, JPEG - Max 10MB)</p>
+                            <input type="file" name="image" class="file-input" id="fileInput" accept="image/*" required
+                                style="display: none;">
+                        </div>
+                    </div>
+
+                    <div class="image-preview-premium" id="imagePreviewContainer">
+                        <img src="" alt="Preview" id="imagePreview">
+                        <br>
+                        <button type="button" class="btn remove-btn-premium" id="removeImageBtn">
+                            <i class="bi bi-x-circle me-2"></i>Remove Image
+                        </button>
+                    </div>
+
+                    <button type="submit" class="btn-premium btn-premium-primary w-100 mt-4" id="predictBtn" disabled
+                        style="font-size: 1.25rem; padding: 1.25rem;">
+                        <i class="bi bi-cpu me-2"></i>Analyze with AI
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disease Categories Section -->
+    <section class="features-premium">
+        <div class="container">
+            <h2 class="section-title-premium" data-aos="fade-up">Disease Categories We Detect</h2>
+            <p class="section-subtitle-premium" data-aos="fade-up" data-aos-delay="100">
+                Our AI model is trained to identify these common apple diseases
+            </p>
+            <div class="row g-4 mt-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card-premium">
+                        <h3 class="feature-title-premium text-premium-emerald">🍎 Bitter Rot</h3>
+                        <p class="feature-description-premium">
+                            Fungal disease causing circular, sunken brown lesions with concentric rings on fruit.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card-premium">
+                        <h3 class="feature-title-premium text-premium-emerald">🍎 Black Rot</h3>
+                        <p class="feature-description-premium">
+                            Serious fungal disease affecting leaves, fruit, and bark with characteristic black lesions.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card-premium">
+                        <h3 class="feature-title-premium text-premium-emerald">🍎 Cedar Rust</h3>
+                        <p class="feature-description-premium">
+                            Distinctive orange or yellow spots on leaves requiring both apple and cedar trees.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-card-premium">
+                        <h3 class="feature-title-premium text-premium-emerald">🍎 Apple Scab</h3>
+                        <p class="feature-description-premium">
+                            Most common apple disease with olive-green to brown spots on leaves and fruit.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-card-premium">
+                        <h3 class="feature-title-premium text-premium-emerald">✅ Healthy</h3>
+                        <p class="feature-description-premium">
+                            Identifies healthy apple leaves with no signs of disease or infection.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Footer -->
+    <footer class="footer-premium">
+        <div class="container">
+            <p>
+                © 2025 Apple Fruit Disease Classification | Developed by <strong>Pranali Kalokhe</strong>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-premium" id="loadingOverlay">
+        <div class="text-center">
+            <div class="loading-spinner-premium"></div>
+            <p class="loading-text-premium">
+                <i class="bi bi-cpu me-2"></i>AI is analyzing your image...
+            </p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100,
+            easing: 'ease-out-cubic'
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Counter Animation for Statistics
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-count'));
+            const duration = 2000;
+            const step = target / (duration / 16);
+            let current = 0;
+
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 16);
+        }
+
+        // Trigger counter animation when stats section is visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    document.querySelectorAll('.stat-number-premium[data-count]').forEach(animateCounter);
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        const statsSection = document.querySelector('.stats-premium');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // File Upload Functionality
+        const fileUploadArea = document.getElementById('fileUploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const imagePreviewContainer = document.getElementById('imagePreviewContainer');
+        const imagePreview = document.getElementById('imagePreview');
+        const removeImageBtn = document.getElementById('removeImageBtn');
+        const predictBtn = document.getElementById('predictBtn');
+        const uploadForm = document.getElementById('uploadForm');
+        const loadingOverlay = document.getElementById('loadingOverlay');
+
+        // Click to upload
+        fileUploadArea.addEventListener('click', () => {
+            fileInput.click();
+        });
+
+        // Drag and drop
+        fileUploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            fileUploadArea.classList.add('drag-over');
+        });
+
+        fileUploadArea.addEventListener('dragleave', () => {
+            fileUploadArea.classList.remove('drag-over');
+        });
+
+        fileUploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            fileUploadArea.classList.remove('drag-over');
+
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                fileInput.files = files;
+                handleFileSelect(files[0]);
+            }
+        });
+
+        // File input change
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                handleFileSelect(e.target.files[0]);
+            }
+        });
+
+        // Handle file selection
+        function handleFileSelect(file) {
+            if (file && file.type.startsWith('image/')) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    imagePreview.src = e.target.result;
+                    imagePreviewContainer.style.display = 'block';
+                    predictBtn.disabled = false;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // Remove image
+        removeImageBtn.addEventListener('click', () => {
+            fileInput.value = '';
+            imagePreview.src = '';
+            imagePreviewContainer.style.display = 'none';
+            predictBtn.disabled = true;
+        });
+
+        // Form submission
+        uploadForm.addEventListener('submit', (e) => {
+            loadingOverlay.classList.add('active');
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
