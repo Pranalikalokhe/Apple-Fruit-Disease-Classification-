@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# Django
+db.sqlite3
+media/
+static/uploads/
+
+# ML / Images
+*.jpg
+*.png
+*.jpeg
+
+# Virtual env
+venv/
+.env
